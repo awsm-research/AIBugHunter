@@ -94,23 +94,217 @@ We use the Big-Vul dataset provided by Fan et al., for more information about th
   Note. If the specified batch size is not suitable for your device, 
   please modify **--eval_batch_size** and **--train_batch_size** to **fit your GPU memory.**
   
+  First, download the experimental datasets via the following commands:
+  ```
+  cd data
+  sh download_data.sh
+  cd ..
+  ```
+  
 ### How to reproduce RQ1 (CWE-ID Classification)
-Run the following command to retrain our approach
+#### 1. Our approach (Multi-Objective Optimization)
+
+Run the following command to retrain:
 ```
 cd rq1_cwe_id_cls/mo_bert
 sh train.sh
 ```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq1_cwe_id_cls/mo_bert/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test.sh
+```
+
+#### 2. CodeBERT
+
+Run the following command to retrain:
+```
+cd rq1_cwe_id_cls/codebert_base
+sh train.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq1_cwe_id_cls/codebert_base/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test.sh
+```
+
+#### 3. BERT-base
+
+Run the following command to retrain:
+```
+cd rq1_cwe_id_cls/bert_base
+sh train.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq1_cwe_id_cls/bert_base/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test.sh
+```
+
+#### 4. BoW+RF
+
+Run the following command to retrain:
+```
+cd rq1_cwe_id_cls/bow_rf
+python rf_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq1_cwe_id_cls/bow_rf/saved_models
+sh download_model.sh
+```
+
+#### 5. Naive Bayes
+
+Run the following command to retrain:
+```
+cd rq1_cwe_id_cls/naive_bayes
+python naive_bayes_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq1_cwe_id_cls/naive_bayes/saved_models
+sh download_model.sh
+```
 
 ### How to replicate RQ2 (CWE-Type Classification)
 
-    
-### How to replicate RQ3 (CVSS Score Regression)
-Run the following command to retrain our approach
+#### 1. Our approach (Multi-Objective Optimization)
+
+Run the following command to retrain:
 ```
-cd rq3_cvss_score_reg/bert
+cd rq1_cwe_id_cls/mo_bert
 sh train.sh
 ```
-  
+Run the following command to run inference using the pre-trained model:
+```
+cd rq1_cwe_id_cls/mo_bert/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test.sh
+```
+Note. Since our approach is a multi-task learning approach, the model is the same as the one used in RQ1.
+
+#### 2. CodeBERT
+
+Run the following command to retrain:
+```
+cd rq2_cwe_type_cls/bert_baseline
+sh train_codebert.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq2_cwe_type_cls/bert_baseline/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test_codebert.sh
+```
+
+#### 3. BERT-base
+
+Run the following command to retrain:
+```
+cd rq2_cwe_type_cls/bert_baseline
+sh train_bert_base.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq2_cwe_type_cls/bert_baseline/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test_bert_base.sh
+```
+
+#### 4. BoW+RF
+
+Run the following command to retrain:
+```
+cd rq2_cwe_type_cls/bow_rf
+python rf_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq2_cwe_type_cls/bow_rf/saved_models
+sh download_model.sh
+```
+
+#### 5. Naive Bayes
+
+Run the following command to retrain:
+```
+cd rq2_cwe_type_cls/naive_bayes
+python naive_bayes_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq2_cwe_type_cls/naive_bayes/saved_models
+sh download_model.sh
+```
+
+    
+### How to replicate RQ3 (CVSS Score Regression)
+#### 1. Our approach (CodeBERT)
+
+Run the following command to retrain:
+```
+cd rq3_cvss_score_reg/bert
+sh train_codebert.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq3_cvss_score_reg/bert/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test_codebert.sh
+```
+
+#### 2. BERT-base
+
+Run the following command to retrain:
+```
+cd rq3_cvss_score_reg/bert
+sh train_bert_base.sh
+```
+Run the following command to run inference using the pre-trained model:
+```
+cd rq3_cvss_score_reg/bert/saved_models/checkpoint-best-acc
+sh download_model.sh
+cd ../..
+sh test_bert_base.sh
+```
+
+#### 3. BoW+RF
+
+Run the following command to retrain:
+```
+cd rq3_cvss_score_reg/bow_rf
+python rf_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq3_cvss_score_reg/bow_rf/saved_models
+sh download_model.sh
+```
+
+#### 4. BoW+LR
+
+Run the following command to retrain:
+```
+cd rq3_cvss_score_reg/bow_lr
+python lr_main.py
+```
+Run the following command to download the pre-trained model:
+```
+cd rq3_cvss_score_reg/bow_lr/saved_models
+sh download_model.sh
+```
+
 </details>
 
 
