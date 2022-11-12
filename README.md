@@ -1,15 +1,17 @@
 <div align="center">
   
-# AIBugHunter Replication Package
-  
+# <a href="https://aibughunter.github.io/">AIBugHunter</a> Replication Package
+
+[![AIBugHunter](https://img.youtube.com/vi/cBmq3oodpQg/hqdefault.jpg)](https://www.youtube.com/watch?v=VLa48NQOCQ4 "AIBugHunter")
+
 </div>
 
 <p align="center">
+  <img src="imgs/logo.png">
   </a>
-  <h3 align="center"><a href="https://aibughunter.github.io/">AIBugHunter</a></h3>
-  <p align="center">
-    A Practical Tool for Predicting, Classifying and Repairing Software Vulnerabilities
-  </p>
+    <div align="center">
+    <h4>A Practical Tool for Predicting, Classifying and Repairing Software Vulnerabilities.</h4>
+    </div>
 </p>
 
 ## Table of contents
@@ -172,6 +174,12 @@ Run the following command to download the pre-trained model:
 cd rq1_cwe_id_cls/naive_bayes/saved_models
 sh download_model.sh
 ```
+
+<div align="center">
+Expected Results
+<img src="./imgs/rq1_results.png">
+</div>
+
 
 ### How to replicate RQ2 (CWE-Type Classification)
 
