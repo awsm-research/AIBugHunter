@@ -176,8 +176,8 @@ sh download_model.sh
 ```
 
 <div align="center">
-Expected Results
-<img src="./imgs/rq1_results.png">
+<h3>Expected Results</h3>
+<img src="./imgs/rq1_results.png" width="550" height="500">
 </div>
 
 
@@ -255,6 +255,10 @@ cd rq2_cwe_type_cls/naive_bayes/saved_models
 sh download_model.sh
 ```
 
+<div align="center">
+<h3>Expected Results</h3>
+<img src="./imgs/rq2_results.png" width="550" height="500">
+</div>
     
 ### How to replicate RQ3 (CVSS Score Regression)
 #### 1. Our approach (CodeBERT)
@@ -312,6 +316,11 @@ Run the following command to download the pre-trained model:
 cd rq3_cvss_score_reg/bow_lr/saved_models
 sh download_model.sh
 ```
+
+<div align="center">
+<h3>Expected Results</h3>
+<img src="./imgs/rq3_results.png" width="1150" height="500">
+</div>
 
 </details>
 
