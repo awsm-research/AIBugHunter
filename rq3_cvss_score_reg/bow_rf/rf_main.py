@@ -6,12 +6,12 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 import pickle
 
 # load train, val data
-train = pd.read_csv('../data/train_wt_type_and_cvss.csv')
-val = pd.read_csv('../data/val_wt_type_and_cvss.csv')
+train = pd.read_csv('../../data/train.csv')
+val = pd.read_csv('../../data/val.csv')
 # use train + val data to fit the model
 train_data = pd.concat([train, val])
 # load test data
-test_data = pd.read_csv('../data/test_wt_type_and_cvss.csv')
+test_data = pd.read_csv('../../data/test.csv')
 # textual code data
 X_train = train_data["func_before"]
 X_test = test_data["func_before"]

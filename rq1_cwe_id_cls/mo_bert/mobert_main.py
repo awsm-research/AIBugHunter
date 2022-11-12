@@ -502,7 +502,7 @@ def train(args, train_dataset, model, tokenizer, eval_dataset, cwe_label_map):
                         logger.info("  " + "*"*20)  
                         logger.info("  Best Acc:%s", round(best_loss,4))
                         logger.info("  " + "*"*20)                          
-                        checkpoint_prefix = 'checkpoint-best-loss'
+                        checkpoint_prefix = 'checkpoint-best-acc'
                         output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))                        
                         if not os.path.exists(output_dir):
                             os.makedirs(output_dir)                        
@@ -798,7 +798,7 @@ def main():
     # Evaluation
     results = {}   
     if args.do_test:
-        checkpoint_prefix = f'checkpoint-best-loss/{args.model_name}'
+        checkpoint_prefix = f'checkpoint-best-acc/{args.model_name}'
         output_dir = os.path.join(args.output_dir, '{}'.format(checkpoint_prefix))  
         model.load_state_dict(torch.load(output_dir, map_location=args.device))
         model.to(args.device)

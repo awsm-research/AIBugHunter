@@ -405,7 +405,7 @@ def train(args, train_dataset, model, tokenizer, eval_dataset, cwe_label_map):
                 cwe_id_loss = cwe_id_loss / args.gradient_accumulation_steps
                 cwe_type_loss = cwe_type_loss / args.gradient_accumulation_steps
 
-            total_loss = 0.5 * cwe_id_loss + 0.5 * cwe_type_loss #+ 0.5 * contrastive_loss_1 + 0.5 * contrastive_loss_2
+            total_loss = 0.5 * cwe_id_loss + 0.5 * cwe_type_loss
             total_loss.backward()
 
             torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)

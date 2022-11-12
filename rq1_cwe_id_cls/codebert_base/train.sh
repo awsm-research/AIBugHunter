@@ -1,18 +1,17 @@
-python mobert_main.py \
+python bert_base_main.py \
   --output_dir=./saved_models \
-  --model_name=mo_model.bin \
   --model_type=roberta \
   --tokenizer_name=microsoft/codebert-base \
   --model_name_or_path=microsoft/codebert-base \
   --do_train \
   --do_test \
-  --train_data_file=../../data/train_wt_type.csv \
-  --eval_data_file=../../data/val_wt_type.csv \
-  --test_data_file=../../data/test_wt_type.csv \
-  --epochs 100 \
+  --train_data_file=../../data/train.csv \
+  --eval_data_file=../../data/val.csv \
+  --test_data_file=../../data/test.csv \
+  --epochs 20 \
   --block_size 512 \
-  --train_batch_size 8 \
-  --eval_batch_size 8 \
+  --train_batch_size 16 \
+  --eval_batch_size 16 \
   --learning_rate 2e-5 \
   --max_grad_norm 1.0 \
   --evaluate_during_training \

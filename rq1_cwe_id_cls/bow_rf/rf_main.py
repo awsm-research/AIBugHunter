@@ -10,12 +10,12 @@ with open("./cwe_label_map.pkl", "rb") as f:
     cwe_label_map = pickle.load(f)
 
 # load train, val data
-train = pd.read_csv('../data/train.csv')
-val = pd.read_csv('../data/val.csv')
+train = pd.read_csv('../../data/train.csv')
+val = pd.read_csv('../../data/val.csv')
 # use train + val data to fit the model
 train_data = pd.concat([train, val])
 # load test data
-test_data = pd.read_csv('../data/test.csv')
+test_data = pd.read_csv('../../data/test.csv')
 # textual code data
 X_train = train_data["func_before"]
 X_test = test_data["func_before"]
