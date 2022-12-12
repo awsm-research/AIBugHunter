@@ -62,6 +62,7 @@ pip install tqdm
 pip install pandas
 pip install scikit-learn
 pip install argparse
+pip install gdown
 ```
 
 Alternatively, we provide requirements.txt with version of packages specified to ensure the reproducibility,
