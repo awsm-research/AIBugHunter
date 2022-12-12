@@ -55,7 +55,13 @@ cd AIBugHunter
 
 Then, install the python dependencies via the following command:
 ```
-...
+pip install numpy
+pip install torch
+pip install transformers
+pip install tqdm
+pip install pandas
+pip install scikit-learn
+pip install argparse
 ```
 
 Alternatively, we provide requirements.txt with version of packages specified to ensure the reproducibility,
