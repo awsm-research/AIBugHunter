@@ -90,7 +90,7 @@ cd ..
 ### About the Datasets
 <details open="open">
   <summary></summary>
-We use the Big-Vul dataset provided by Fan et al., for more information about the dataset, please refer to [this repository](https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset). 
+We use the Big-Vul dataset provided by Fan et al., for more information about the dataset, please refer to <a href="https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset">this repository</a>. 
 </div>
 </details>
 
@@ -326,7 +326,7 @@ sh download_model.sh
 
 <div align="center">
 <h3>Expected Results</h3>
-<img src="./imgs/rq3_results.png" width="1150" height="500">
+<img src="./imgs/rq3_results.png" width="1150" height="470">
 </div>
 
 </details>
