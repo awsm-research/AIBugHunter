@@ -2,7 +2,7 @@
   
 # <a href="https://aibughunter.github.io/">AIBugHunter</a> Replication Package
 
-[![AIBugHunter](https://img.youtube.com/vi/cBmq3oodpQg/hqdefault.jpg)](https://www.youtube.com/watch?v=VLa48NQOCQ4 "AIBugHunter")
+[![AIBugHunter](https://img.youtube.com/vi/cBmq3oodpQg/hqdefault.jpg)](https://www.youtube.com/watch?v=sSV2XjxJfkM "AIBugHunter")
 
 </div>
 
