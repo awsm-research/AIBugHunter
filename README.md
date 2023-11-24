@@ -340,10 +340,14 @@ sh download_model.sh
 
 ## Citation
 ```bash
-@article{fu2023aibughunter,
-  title={AIBugHunter: A Practical Tool for Predicting, Classifying and Repairing Software Vulnerabilities},
+@article{fu2024aibughunter,
+  title={Aibughunter: A practical tool for predicting, classifying and repairing software vulnerabilities},
   author={Fu, Michael and Tantithamthavorn, Chakkrit and Le, Trung and Kume, Yuki and Nguyen, Van and Phung, Dinh and Grundy, John},
-  journal={arXiv preprint arXiv:2305.16615},
-  year={2023}
+  journal={Empirical Software Engineering},
+  volume={29},
+  number={1},
+  pages={4},
+  year={2024},
+  publisher={Springer}
 }
 ```
