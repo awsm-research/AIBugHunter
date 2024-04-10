@@ -609,7 +609,7 @@ def test(args, model, tokenizer, test_dataset, best_threshold=0.5, cwe_label_map
     
     print("CWE ID Accuracy:", round(sum(correctly_predicted_id)/len(correctly_predicted_id), 4))
     print("CWE Type Accuracy:", round(sum(correctly_predicted_type)/len(correctly_predicted_type), 4))
-    test_df.to_csv("./raw_predictions/movul_raw_predictions.csv", index=False)
+    #test_df.to_csv("./raw_predictions/movul_raw_predictions.csv", index=False)
 
 def compute_logit_weight_map(cwe_label_map, type_label_map):
     for cwe_id in cwe_label_map.keys():

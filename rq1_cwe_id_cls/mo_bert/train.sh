@@ -6,9 +6,9 @@ python mobert_main.py \
   --model_name_or_path=microsoft/codebert-base \
   --do_train \
   --do_test \
-  --train_data_file=../../data/train_wt_type.csv \
-  --eval_data_file=../../data/val_wt_type.csv \
-  --test_data_file=../../data/test_wt_type.csv \
+  --train_data_file=../../data/train.csv \
+  --eval_data_file=../../data/val.csv \
+  --test_data_file=../../data/test.csv \
   --epochs 100 \
   --block_size 512 \
   --train_batch_size 8 \

@@ -5,6 +5,7 @@ python mobert_main.py \
   --tokenizer_name=microsoft/codebert-base \
   --model_name_or_path=microsoft/codebert-base \
   --do_test \
-  --test_data_file=../../data/test_wt_type.csv \
+  --test_data_file=../../data/test.csv \
   --eval_batch_size 8 \
+  --block_size 512 \
   --seed 123456  2>&1 | tee test.log
